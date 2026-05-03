@@ -1,0 +1,65 @@
+[
+  {
+    "id": "olin1",
+    "name": "Olin Library 1",
+    "images": ["olin-1.jpg"],
+    "description": "Main floor of the library. The help desk is located here, where you can borrow books, chargers, and other equipment.",
+    "attributes": ["Social", "Big Tables", "Natural Lighting", "Group Study", "Central", "Food Allowed", "Charging"]
+  },
+  {
+    "id": "olin2",
+    "name": "Olin Library 2",
+    "images": ["olin-2.jpg"],
+    "description": "Second floor of the library. Lots of comfy seats and access to the sky room. Often described as being quiet but not too quiet.",
+    "attributes": ["Quiet", "Big Tables", "Natural Lighting", "Group Study", "Couches", "Central", "Food Allowed", "Charging"]
+  },
+  {
+    "id": "olin3",
+    "name": "Olin Library 3",
+    "images": ["olin-3.jpg"],
+    "description": "Third floor of the library. There are a lot of cubicles for individual study. The noise level is silent.",
+    "attributes": ["Silent", "Big Tables", "Natural Lighting", "Central", "Food Allowed", "Charging"]
+  },
+  {
+    "id": "kranzberg",
+    "name": "Kranzberg Library",
+    "images": ["kranzberg.jpg"],
+    "description": "The architecture library East of the WashU campus. It got some natural lighting. It has plenty of machines available for processing physical and digital media, such as document scanners and paper cutters.",
+    "attributes": ["Silent", "Big Tables", "Couches", "East End", "Food Allowed", "Charging"]
+  },
+  {
+    "id": "pfeiffer",
+    "name": "Gustavus A. Pfeiffer Physics Library",
+    "images": ["physics-library.jpg"],
+    "description": "The architecture library East of the WashU campus.",
+    "attributes": ["Quiet", "Big Tables", "Group Study", "Central", "Food Allowed", "Charging"]
+  },
+  {
+    "id": "kopolow",
+    "name": "Al and Ruth Kopolow Library",
+    "images": ["kopolow.jpg"],
+    "description": "The business library located in the second floor of Simon Hall.",
+    "attributes": ["Quiet", "Big Tables", "Natural Lighting", "Group Study", "West End", "Food Allowed", "Charging"]
+  },
+  {
+    "id": "brown",
+    "name": "Brown Library",
+    "images": ["brown-library.jpg"],
+    "description": "The Brown library is located on the third floor of Brown Hall and is focused on serving the Brown School of Public Health.",
+    "attributes": ["Silent", "Big Tables", "Natural Lighting", "Group Study", "East End", "Charging"]
+  },
+  {
+    "id": "eastasian",
+    "name": "East Asian Library",
+    "images": ["east-asian-library.jpg"],
+    "description": "The East Asian library located on the East end of campus.",
+    "attributes": ["Silent", "Big Tables", "Natural Lighting", "Group Study", "East End", "Charging"]
+  },
+  {
+    "id": "brookings",
+    "name": "Brookings Quad",
+    "images": ["brookings-quad.webp"],
+    "description": "Located on the East end of campus, it has plenty of benches in the shade and sun, perfect for getting work done on days with nice weather with the gorgeous Brookings Hall in view.",
+    "attributes": ["Quiet", "Natural Lighting", "East End", "Food Allowed"]
+  }
+]
