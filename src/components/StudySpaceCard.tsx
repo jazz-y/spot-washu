@@ -9,12 +9,12 @@ interface StudySpaceProps {
 export const StudySpaceCard: React.FC<StudySpaceProps> = ({ name, images, description, attributes }) => {
   return (
     // flex for cards
-    <div className="flex flex-col h-full bg-[#fce8ed] rounded-2xl overflow-hidden shadow-sm border border-[#f5d0d8]">
+    <div className="flex flex-col h-full bg-deep-red-7 rounded-2xl overflow-hidden shadow-sm border border-deep-red-6">
       {/* img container*/}
-      <div className="w-full h-48 bg-gray-200">
+      <div className="w-full h-48 bg-deep-red-7">
         {images.length > 0 ? (
           <img 
-            src={images[0]} 
+            src={`src/img/${images[0]}`} 
             alt={name} 
             className="w-full h-full object-cover"
           />
@@ -32,7 +32,7 @@ export const StudySpaceCard: React.FC<StudySpaceProps> = ({ name, images, descri
           {attributes.map((attr, index) => (
             <span 
               key={index} 
-              className="px-2 py-0.5 text-xs font-semibo ld text-[#f87171] border border-[#fca5a5] rounded-full bg-white"
+              className="px-2 py-0.5 text-xs font-semibo ld text-deep-red-1 border border-deep-red-2 rounded-full bg-white"
             >
               {attr}
             </span>

@@ -37,7 +37,7 @@
   {
     "id": "kopolow",
     "name": "Al and Ruth Kopolow Library",
-    "images": ["kopolow.jpg"],
+    "images": ["kopolow.jpg", "physics-library.jpg"],
     "description": "The business library located in the second floor of Simon Hall.",
     "attributes": ["Quiet", "Big Tables", "Natural Lighting", "Group Study", "West End", "Food Allowed", "Charging"]
   },
@@ -58,7 +58,7 @@
   {
     "id": "brookings",
     "name": "Brookings Quad",
-    "images": ["brookings-quad.webp"],
+    "images": ["brookings-quad.jpg"],
     "description": "Located on the East end of campus, it has plenty of benches in the shade and sun, perfect for getting work done on days with nice weather with the gorgeous Brookings Hall in view.",
     "attributes": ["Quiet", "Natural Lighting", "East End", "Food Allowed"]
   }
