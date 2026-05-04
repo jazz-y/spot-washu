@@ -10,22 +10,22 @@
     "id": "olin2",
     "name": "Olin Library 2",
     "images": ["olin-2.jpg"],
-    "description": "Second floor of the library. Lots of comfy seats and access to the sky room. Often described as being quiet but not too quiet.",
+    "description": "Second floor of the library. Lots of comfy seats seating. Often described as quiet but not too quiet.",
     "attributes": ["Quiet", "Big Tables", "Natural Lighting", "Group Study", "Couches", "Central", "Food Allowed", "Charging"]
   },
   {
     "id": "olin3",
     "name": "Olin Library 3",
     "images": ["olin-3.jpg"],
-    "description": "Third floor of the library. There are a lot of cubicles for individual study. The noise level is silent.",
+    "description": "Third floor of the library, with access to the sky room. There are a lot of individual study carrels. It's a great place to focus on your own work without distractions.",
     "attributes": ["Silent", "Big Tables", "Natural Lighting", "Central", "Food Allowed", "Charging"]
   },
   {
     "id": "kranzberg",
     "name": "Kranzberg Library",
     "images": ["kranzberg.jpg"],
-    "description": "The architecture library East of the WashU campus. It got some natural lighting. It has plenty of machines available for processing physical and digital media, such as document scanners and paper cutters.",
-    "attributes": ["Silent", "Big Tables", "Couches", "East End", "Food Allowed", "Charging"]
+    "description": "The architecture library Esast of the WashU campus. It got some natural lighting. It has plenty of machines available for processing physical and digital media, such as document scanners and paper cutters.",
+    "attributes": ["Silent", "Big Tables", "East End", "Food Allowed", "Charging"]
   },
   {
     "id": "pfeiffer",
