@@ -1,10 +1,10 @@
 import { X, LayoutGrid, Armchair, Users, Sun } from 'lucide-react';
 
-interface SidebarProps {
+interface FiltersPanelProps {
   onClose: () => void;
 }
 
-export const Sidebar = ({ onClose }: SidebarProps) => {
+export const FiltersPanel = ({ onClose }: FiltersPanelProps) => {
   return (
     <div className="w-full bg-[#fce8ed] rounded-2xl p-6 flex flex-col border border-[#f5d0d8] shadow-2xl">
       {/* noise section */}

@@ -25,14 +25,14 @@ export const StudySpaceCard: React.FC<StudySpaceProps> = ({ name, images, descri
 
       {/* content wrapper */}
       <div className="p-4 flex flex-col flex-grow">
-        <h3 className="text-xl font-medium text-gray-800 mb-3">{name}</h3>
+        <h3 className="text-2xl font-source-sans font-bold text-deep-red-1 mb-3">{name}</h3>
         
         {/* attributes pills */}
         <div className="flex flex-wrap gap-2 mb-4">
           {attributes.map((attr, index) => (
             <span 
               key={index} 
-              className="px-2 py-0.5 text-xs font-semibo ld text-deep-red-1 border border-deep-red-2 rounded-full bg-white"
+              className="px-2 py-0.5 text-xs font-semibo font-medium ld text-deep-red-1 border border-deep-red-5 rounded-full bg-deep-red-6"
             >
               {attr}
             </span>
@@ -40,7 +40,7 @@ export const StudySpaceCard: React.FC<StudySpaceProps> = ({ name, images, descri
         </div> 
 
         {/* desc */}
-        <p className="text-sm text-gray-700 leading-relaxed mt-auto">
+        <p className="text-sm text-deep-red-1 leading-relaxed mt-auto">
           {description}
         </p>
       </div>

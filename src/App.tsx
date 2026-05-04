@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from 'react';
 import { StudySpaceCard } from './components/StudySpaceCard';
-import { Sidebar } from './components/Sidebar';
+import { FiltersPanel } from './components/Sidebar';
 import { Header } from './components/Header';
 import spacesData from './data/spaces.json';
 
@@ -37,7 +37,7 @@ function App() {
             ref={filtersRef} 
             className="absolute z-50 left-4 md:left-8 top-0 w-[calc(100%-2rem)] md:w-80"
           >
-            <Sidebar onClose={() => setIsFiltersOpen(false)} />
+            <FiltersPanel onClose={() => setIsFiltersOpen(false)} />
           </div>
         )}
 
