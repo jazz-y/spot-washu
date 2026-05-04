@@ -2,6 +2,7 @@ import { useState, useRef, useEffect } from 'react';
 import { StudySpaceCard } from './components/StudySpaceCard';
 import { FiltersPanel } from './components/FiltersPanel';
 import { Header } from './components/Header';
+import { Map } from './components/Map';
 import spacesData from './data/spaces.json';
 
 function App() {
@@ -51,17 +52,17 @@ function App() {
   });
 
   return (
-    <div className="min-h-screen bg-white text-gray-900 font-sans relative">
+    <div className="min-h-screen bg-white text-gray-900 font-sans relative w-full h-full">
       {/* top header */}
       <Header onToggleFilters={() => setIsFiltersOpen((prev) => !prev)} />
 
       {/* layout container */}
-      <main className="max-w-[1600px] mx-auto px-4 md:px-8 pb-12 relative flex">
+      <main className="flex gap-0 h-[calc(100vh-80px)] w-full">
         {/* filters popup absolute over grid */}
         {isFiltersOpen && (
           <div 
             ref={filtersRef} 
-            className="absolute z-50 left-4 md:left-8 top-0 w-[calc(100%-2rem)] md:w-80"
+            className="absolute z-50 left-4 md:left-8 top-20 w-[calc(100%-2rem)] md:w-80"
           >
             <FiltersPanel 
               onClose={() => setIsFiltersOpen(false)} 
@@ -73,8 +74,9 @@ function App() {
           </div>
         )}
 
-        {/* css grid */}
-        <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 items-stretch">
+        {/* grid section - left half */}
+        <section className="basis-1/2 overflow-y-auto px-4 md:px-8 py-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
           {filteredSpaces.map((space) => (
             <StudySpaceCard 
               key={space.id}
@@ -84,7 +86,14 @@ function App() {
               attributes={space.attributes}
             />
           ))}
+          </div>
+        </section>
+
+        {/* map section - right half */}
+        <div id="map" className="basis-1/2 h-full p-0 m-0">
+          <Map filteredSpaces={filteredSpaces} />
         </div>
+
       </main>
     </div>
   );

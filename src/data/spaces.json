@@ -4,62 +4,98 @@
     "name": "Olin Library 1",
     "images": ["olin-1.jpg"],
     "description": "Main floor of the library. The help desk is located here, where you can borrow books, chargers, and other equipment.",
-    "attributes": ["Social", "Big Tables", "Natural Lighting", "Group Study", "Central", "Food Allowed", "Charging"]
+    "attributes": ["Social", "Big Tables", "Natural Lighting", "Group Study", "Central", "Food Allowed", "Charging"],
+    "coords": {
+      "lat": 38.648405825566726, 
+      "long": -90.3079401473492
+    }
   },
   {
     "id": "olin2",
     "name": "Olin Library 2",
     "images": ["olin-2.jpg"],
     "description": "Second floor of the library. Lots of comfy seats seating. Often described as quiet but not too quiet.",
-    "attributes": ["Quiet", "Big Tables", "Natural Lighting", "Group Study", "Couches", "Central", "Food Allowed", "Charging"]
+    "attributes": ["Quiet", "Big Tables", "Natural Lighting", "Group Study", "Couches", "Central", "Food Allowed", "Charging"],
+    "coords": {
+      "lat": 38.648641347046535, 
+      "long": -90.30751164430549
+    }
   },
   {
     "id": "olin3",
     "name": "Olin Library 3",
     "images": ["olin-3.jpg"],
     "description": "Third floor of the library, with access to the sky room. There are a lot of individual study carrels. It's a great place to focus on your own work without distractions.",
-    "attributes": ["Silent", "Big Tables", "Natural Lighting", "Central", "Food Allowed", "Charging"]
+    "attributes": ["Silent", "Big Tables", "Natural Lighting", "Central", "Food Allowed", "Charging"],
+    "coords": {
+      "lat": 38.64876861365077,
+      "long": -90.30773171823976
+    }
   },
   {
     "id": "kranzberg",
     "name": "Kranzberg Library",
     "images": ["kranzberg.jpg"],
-    "description": "The architecture library Esast of the WashU campus. It got some natural lighting. It has plenty of machines available for processing physical and digital media, such as document scanners and paper cutters.",
-    "attributes": ["Silent", "Big Tables", "East End", "Food Allowed", "Charging"]
+    "description": "The architecture library East of the WashU campus. It got some natural lighting. It has plenty of machines available for processing physical and digital media, such as document scanners and paper cutters.",
+    "attributes": ["Silent", "Big Tables", "East End", "Food Allowed", "Charging"],
+    "coords": {
+      "lat": 38.647036744215164, 
+      "long": -90.3028824609065
+    }
   },
   {
     "id": "pfeiffer",
     "name": "Gustavus A. Pfeiffer Physics Library",
     "images": ["physics-library.jpg"],
     "description": "The architecture library East of the WashU campus.",
-    "attributes": ["Quiet", "Big Tables", "Group Study", "Central", "Food Allowed", "Charging"]
+    "attributes": ["Quiet", "Big Tables", "Group Study", "Central", "Food Allowed", "Charging"],
+    "coords": {
+      "lat": 38.64966625508409, 
+      "long": -90.30523416948195
+    }
   },
   {
     "id": "kopolow",
     "name": "Al and Ruth Kopolow Library",
     "images": ["kopolow.jpg", "physics-library.jpg"],
     "description": "The business library located in the second floor of Simon Hall.",
-    "attributes": ["Quiet", "Big Tables", "Natural Lighting", "Group Study", "West End", "Food Allowed", "Charging"]
+    "attributes": ["Quiet", "Big Tables", "Natural Lighting", "Group Study", "West End", "Food Allowed", "Charging"],
+    "coords": {
+      "lat": 38.64827407603961, 
+      "long": -90.31147960323518
+    }
   },
   {
     "id": "brown",
     "name": "Brown Library",
     "images": ["brown-library.jpg"],
     "description": "The Brown library is located on the third floor of Brown Hall and is focused on serving the Brown School of Public Health.",
-    "attributes": ["Silent", "Big Tables", "Natural Lighting", "Group Study", "East End", "Charging"]
+    "attributes": ["Silent", "Big Tables", "Natural Lighting", "Group Study", "East End", "Charging"],
+    "coords": {
+      "lat": 38.6471651833344, 
+      "long": -90.30547659896075
+    }
   },
   {
     "id": "eastasian",
     "name": "East Asian Library",
     "images": ["east-asian-library.jpg"],
     "description": "The East Asian library located on the East end of campus.",
-    "attributes": ["Silent", "Big Tables", "Natural Lighting", "Group Study", "East End", "Charging"]
+    "attributes": ["Silent", "Big Tables", "Natural Lighting", "Group Study", "East End", "Charging"],
+    "coords": {
+      "lat": 38.64776411513188, 
+      "long": -90.30632632907381
+    }
   },
   {
     "id": "brookings",
     "name": "Brookings Quad",
     "images": ["brookings-quad.jpg"],
     "description": "Located on the East end of campus, it has plenty of benches in the shade and sun, perfect for getting work done on days with nice weather with the gorgeous Brookings Hall in view.",
-    "attributes": ["Quiet", "Natural Lighting", "East End", "Food Allowed"]
+    "attributes": ["Quiet", "Natural Lighting", "East End", "Food Allowed"],
+    "coords": {
+      "lat": 38.64808057767718, 
+      "long": -90.30564293734494
+    }
   }
 ]
