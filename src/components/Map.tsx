@@ -27,6 +27,7 @@ const osmMapnik = {
   url: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
   maxZoom: 19,
   attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+  subdomains: 'abc',
 };
 
 const osmFallback = {
@@ -73,7 +74,7 @@ export const Map: React.FC<MapProps> = ({ filteredSpaces, selectedSpaceId, onMar
         attribution={activeTiles.attribution}
         url={activeTiles.url}
         maxZoom={activeTiles.maxZoom}
-        subdomains={isUsingFallback ? osmFallback.subdomains : undefined}
+        subdomains={activeTiles.subdomains}
         eventHandlers={{
           tileerror: () => {
             if (!isUsingFallback) {
