@@ -9,7 +9,9 @@ function App() {
   const [isFiltersOpen, setIsFiltersOpen] = useState(false);
   const [selectedNoise, setSelectedNoise] = useState<string[]>([]);
   const [selectedFeatures, setSelectedFeatures] = useState<string[]>([]);
+  const [selectedSpaceId, setSelectedSpaceId] = useState<string | undefined>(undefined);
   const filtersRef = useRef<HTMLDivElement>(null);
+  const cardRefs = useRef<Record<string, HTMLDivElement | null>>({});
 
   const handleToggleNoise = (noise: string) => {
     setSelectedNoise(prev => 
@@ -21,6 +23,14 @@ function App() {
     setSelectedFeatures(prev => 
       prev.includes(feature) ? prev.filter(f => f !== feature) : [...prev, feature]
     );
+  };
+
+  const handleMarkerClick = (spaceId: string) => {
+    setSelectedSpaceId(spaceId);
+    // scroll to card if there
+    setTimeout(() => {
+      cardRefs.current[spaceId]?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 0);
   };
 
   // when clicking outside popup works
@@ -78,20 +88,32 @@ function App() {
         <section className="basis-1/2 overflow-y-auto px-4 md:px-8 py-6">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
           {filteredSpaces.map((space) => (
-            <StudySpaceCard 
+            <div
               key={space.id}
-              name={space.name}
-              images={space.images}
-              description={space.description}
-              attributes={space.attributes}
-            />
+              ref={(el) => {
+                if (el) cardRefs.current[space.id] = el;
+              }}
+              onClick={() => setSelectedSpaceId(space.id)}
+              className={selectedSpaceId === space.id ? 'ring-2 ring-deep-red-1' : ''}
+            >
+              <StudySpaceCard 
+                name={space.name}
+                images={space.images}
+                description={space.description}
+                attributes={space.attributes}
+              />
+            </div>
           ))}
           </div>
         </section>
 
         {/* map section - right half */}
         <div id="map" className="basis-1/2 h-full p-0 m-0">
-          <Map filteredSpaces={filteredSpaces} />
+          <Map 
+            filteredSpaces={filteredSpaces} 
+            selectedSpaceId={selectedSpaceId}
+            onMarkerClick={handleMarkerClick}
+          />
         </div>
 
       </main>
