@@ -23,7 +23,7 @@ export const Header = ({ onToggleFilters, onSearch }: HeaderProps) => {
     <header className="bg-deep-red-6 py-4 px-6 md:px-8 mb-6 flex items-center gap-4">
       {/* logo */}
       <div className="flex items-center gap-2 text-deep-red-1 mr-auto">
-        <img src="/poodle.svg" alt="Spot Logo" className="w-10 h-10" />
+        <img src={`${import.meta.env.BASE_URL}poodle.svg`} alt="Spot Logo" className="w-10 h-10" />
         <h1 className="text-4xl font-playfair">Spot</h1>
       </div>
 
