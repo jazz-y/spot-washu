@@ -7,11 +7,19 @@ import spacesData from './data/spaces.json';
 
 function App() {
   const [isFiltersOpen, setIsFiltersOpen] = useState(false);
+  const [searchQuery, setSearchQuery] = useState('');
   const [selectedNoise, setSelectedNoise] = useState<string[]>([]);
   const [selectedFeatures, setSelectedFeatures] = useState<string[]>([]);
   const [selectedSpaceId, setSelectedSpaceId] = useState<string | undefined>(undefined);
   const filtersRef = useRef<HTMLDivElement>(null);
   const cardRefs = useRef<Record<string, HTMLDivElement | null>>({});
+
+  const handleSearch = (query: string) => {
+    setSearchQuery(query);
+    // reset other filters when a literal search is requested
+    setSelectedNoise([]);
+    setSelectedFeatures([]);
+  };
 
   const handleToggleNoise = (noise: string) => {
     setSelectedNoise(prev => 
@@ -50,6 +58,11 @@ function App() {
   }, [isFiltersOpen]);
 
   const filteredSpaces = spacesData.filter((space) => {
+    // If no search query passes, match name or description
+    const matchesSearch = searchQuery === '' || 
+      space.name.toLowerCase().includes(searchQuery.toLowerCase()) || 
+      space.description.toLowerCase().includes(searchQuery.toLowerCase());
+
     // If no noise filters are selected, pass. Otherwise, space must match at least one selected noise level.
     const matchesNoise = selectedNoise.length === 0 || 
       selectedNoise.some(noise => space.attributes.includes(noise));
@@ -58,13 +71,13 @@ function App() {
     const matchesFeatures = selectedFeatures.length === 0 || 
       selectedFeatures.every(feature => space.attributes.includes(feature));
 
-    return matchesNoise && matchesFeatures;
+    return matchesSearch && matchesNoise && matchesFeatures;
   });
 
   return (
     <div className="min-h-screen bg-white text-gray-900 font-sans relative w-full h-full">
       {/* top header */}
-      <Header onToggleFilters={() => setIsFiltersOpen((prev) => !prev)} />
+      <Header onToggleFilters={() => setIsFiltersOpen((prev) => !prev)} onSearch={handleSearch} />
 
       {/* layout container */}
       <main className="flex gap-0 h-[calc(100vh-80px)] w-full">
