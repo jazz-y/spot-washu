@@ -6,15 +6,19 @@ interface StudySpaceProps {
   attributes: string[];
 }
 
+const studySpaceImages = import.meta.glob('../img/*', { eager: true, import: 'default' }) as Record<string, string>;
+
 export const StudySpaceCard: React.FC<StudySpaceProps> = ({ name, images, description, attributes }) => {
+  const imageSrc = images.length > 0 ? studySpaceImages[`../img/${images[0]}`] : undefined;
+
   return (
     // flex for cards
     <div className="flex flex-col h-full bg-deep-red-8 rounded-2xl overflow-hidden shadow-sm border border-deep-red-6">
       {/* img container*/}
       <div className="w-full h-48 bg-deep-red-7">
-        {images.length > 0 ? (
+        {imageSrc ? (
           <img 
-            src={`src/img/${images[0]}`} 
+            src={imageSrc}
             alt={name} 
             className="w-full h-full object-cover"
           />
